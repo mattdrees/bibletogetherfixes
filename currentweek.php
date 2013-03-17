@@ -237,7 +237,7 @@
                 </div>
                 <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent5')">FRIDAY</a>
 			</div>
-			<div class"one coloum omega"></div>
+			<div class="one coloum omega"></div>
 		</div>		
 
 		<hr style="margin: 10px 0 10px" />
@@ -258,7 +258,7 @@
                 </div>
                 <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','sermonReflectionContent')">BOOK of the WEEK</a>
 			</div>
-			<div class"one coloum omega"></div>
+			<div class="one coloum omega"></div>
 		<div class="eleven columns" clearfix>
 			
 		</div>
