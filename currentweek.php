@@ -186,52 +186,56 @@
                 <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent1')">MONDAY</a>
 			</div>
 			<div class="two columns" id="daynav">
-				<a href="javascript:ReplaceContentInContainer('reflectioncontent','
-				<?php
-				$post_id = $queriedpost_id[2];
-				$queried_post = get_post($post_id);
-				?>
-				<h2><?php echo $queried_post->post_title; ?></h2>
-				<p><?php echo $scripture2; ?></p>
-				<p class=&quot;bible-link&quot; id=&quot;bible-link&quot;>( &lt;a href=&quot;<?php echo $youversionurl2; ?>&quot; target=&quot;_blank&quot;&gt;YouVersion</a> | &lt;a href=&quot;<?php echo $logosurl2; ?>&quot; target=&quot;_blank&quot;&gt;Biblia</a> | &lt;a href=&quot;<?php echo $logoiphoneurl2; ?>&quot; target=&quot;_blank&quot;&gt;Logos</a> )</p>
-				<p id=&quot;perma-link&quot;>&lt;a href=&quot;<?php echo get_permalink($queried_post->ID); ?>&quot;&gt;View Reflection</a></p>
-				')">TUESDAY</a>
+                <div style="display: none" id="reflectionContent2">
+                    <?php
+                    $post_id = $queriedpost_id[2];
+                    $queried_post = get_post($post_id);
+                    ?>
+                    <h2><?php echo $queried_post->post_title; ?></h2>
+                    <p><?php echo $scripture2; ?></p>
+                    <p class="bible-link" id="bible-link">( <a href="<?php echo $youversionurl2; ?>" target="_blank">YouVersion</a> | <a href="<?php echo $logosurl2; ?>" target="_blank">Biblia</a> | <a href="<?php echo $logoiphoneurl2; ?>" target="_blank">Logos</a> )</p>
+                    <p id="perma-link"><a href="<?php echo get_permalink($queried_post->ID); ?>">View Reflection</a></p>
+                </div>
+                <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent2')">TUESDAY</a>
 			</div>
 			<div class="two columns" id="daynav">
-				<a href="javascript:ReplaceContentInContainer('reflectioncontent','
-				<?php
-				$post_id = $queriedpost_id[3];
-				$queried_post = get_post($post_id);
-				?>
-				<h2><?php echo $queried_post->post_title; ?></h2>
-				<p><?php echo $scripture3; ?></p>
-				<p class=&quot;bible-link&quot; id=&quot;bible-link&quot;>( &lt;a href=&quot;<?php echo $youversionurl3; ?>&quot; target=&quot;_blank&quot;&gt;YouVersion</a> | &lt;a href=&quot;<?php echo $logosurl3; ?>&quot; target=&quot;_blank&quot;&gt;Biblia</a> | &lt;a href=&quot;<?php echo $logoiphoneurl3; ?>&quot; target=&quot;_blank&quot;&gt;Logos</a> )</p>
-				<p id=&quot;perma-link&quot;>&lt;a href=&quot;<?php echo get_permalink($queried_post->ID); ?>&quot;&gt;View Reflection</a></p>
-				')">WEDNESDAY</a>
+                <div style="display: none" id="reflectionContent3">
+                    <?php
+                    $post_id = $queriedpost_id[3];
+                    $queried_post = get_post($post_id);
+                    ?>
+                    <h2><?php echo $queried_post->post_title; ?></h2>
+                    <p><?php echo $scripture3; ?></p>
+                    <p class="bible-link" id="bible-link">( <a href="<?php echo $youversionurl3; ?>" target="_blank">YouVersion</a> | <a href="<?php echo $logosurl3; ?>" target="_blank">Biblia</a> | <a href="<?php echo $logoiphoneurl3; ?>" target="_blank">Logos</a> )</p>
+                    <p id="perma-link"><a href="<?php echo get_permalink($queried_post->ID); ?>">View Reflection</a></p>
+                </div>
+                <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent3')">WEDNESDAY</a>
 			</div>
 			<div class="two columns" id="daynav">
-				<a href="javascript:ReplaceContentInContainer('reflectioncontent','
-				<?php
-				$post_id = $queriedpost_id[4];
-				$queried_post = get_post($post_id);
-				?>
-				<h2><?php echo $queried_post->post_title; ?></h2>
-				<p><?php echo $scripture4; ?></p>
-				<p class=&quot;bible-link&quot; id=&quot;bible-link&quot;>( &lt;a href=&quot;<?php echo $youversionurl4; ?>&quot; target=&quot;_blank&quot;&gt;YouVersion</a> | &lt;a href=&quot;<?php echo $logosurl4; ?>&quot; target=&quot;_blank&quot;&gt;Biblia</a> | &lt;a href=&quot;<?php echo $logoiphoneurl4; ?>&quot; target=&quot;_blank&quot;&gt;Logos</a> )</p>
-				<p id=&quot;perma-link&quot;>&lt;a href=&quot;<?php echo get_permalink($queried_post->ID); ?>&quot;&gt;View Reflection</a></p>
-				')">THURSDAY</a>
+                <div style="display: none" id="reflectionContent4">
+                    <?php
+                    $post_id = $queriedpost_id[4];
+                    $queried_post = get_post($post_id);
+                    ?>
+                    <h2><?php echo $queried_post->post_title; ?></h2>
+                    <p><?php echo $scripture4; ?></p>
+                    <p class="bible-link" id="bible-link">( <a href="<?php echo $youversionurl4; ?>" target="_blank">YouVersion</a> | <a href="<?php echo $logosurl4; ?>" target="_blank">Biblia</a> | <a href="<?php echo $logoiphoneurl4; ?>" target="_blank">Logos</a> )</p>
+                    <p id="perma-link"><a href="<?php echo get_permalink($queried_post->ID); ?>">View Reflection</a></p>
+                </div>
+                <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent4')">THURSDAY</a>
 			</div>
 			<div class="two columns" id="daynav">
-				<a href="javascript:ReplaceContentInContainer('reflectioncontent','
-				<?php
-				$post_id = $queriedpost_id[5];
-				$queried_post = get_post($post_id);
-				?>
-				<h2><?php echo $queried_post->post_title; ?></h2>
-				<p><?php echo $scripture5; ?></p>
-				<p class=&quot;bible-link&quot; id=&quot;bible-link&quot;>( &lt;a href=&quot;<?php echo $youversionurl5; ?>&quot; target=&quot;_blank&quot;&gt;YouVersion</a> | &lt;a href=&quot;<?php echo $logosurl5; ?>&quot; target=&quot;_blank&quot;&gt;Biblia</a> | &lt;a href=&quot;<?php echo $logoiphoneurl5; ?>&quot; target=&quot;_blank&quot;&gt;Logos</a> )</p>
-				<p id=&quot;perma-link&quot;>&lt;a href=&quot;<?php echo get_permalink($queried_post->ID); ?>&quot;&gt;View Reflection</a></p>
-				')">FRIDAY</a>
+                <div style="display: none" id="reflectionContent5">
+                    <?php
+                    $post_id = $queriedpost_id[5];
+                    $queried_post = get_post($post_id);
+                    ?>
+                    <h2><?php echo $queried_post->post_title; ?></h2>
+                    <p><?php echo $scripture5; ?></p>
+                    <p class="bible-link" id="bible-link">( <a href="<?php echo $youversionurl5; ?>" target="_blank">YouVersion</a> | <a href="<?php echo $logosurl5; ?>" target="_blank">Biblia</a> | <a href="<?php echo $logoiphoneurl5; ?>" target="_blank">Logos</a> )</p>
+                    <p id="perma-link"><a href="<?php echo get_permalink($queried_post->ID); ?>">View Reflection</a></p>
+                </div>
+                <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent5')">FRIDAY</a>
 			</div>
 			<div class"one coloum omega"></div>
 		</div>		
@@ -239,18 +243,20 @@
 		<hr style="margin: 10px 0 10px" />
 		
 			<div class="five columns alpha" id="daynav2">
-				<a href="javascript:ReplaceContentInContainer('reflectioncontent','
-				<h2><?php echo $sermonposts[0]->post_title; ?></h2>
-				<p class=&quot;bible-link&quot; id=&quot;bible-link&quot;>( &lt;a href=&quot;<?php echo $sermon_youversionurl; ?>&quot; target=&quot;_blank&quot;&gt;YouVersion</a> | &lt;a href=&quot;<?php echo $sermon_logosurl; ?>&quot; target=&quot;_blank&quot;&gt;Biblia</a> | &lt;a href=&quot;<?php echo $sermon_logosiphoneurl; ?>&quot; target=&quot;_blank&quot;&gt;Logos</a> )</p>
-				<p id=&quot;perma-link&quot;>&lt;a href=&quot;<?php echo get_permalink($sermon_ID); ?>&quot;&gt;View Reflection</a></p>
-				')">SERMON REFLECTION</a>
+                <div style="display: none" id="sermonReflectionContent">
+                    <h2><?php echo $sermonposts[0]->post_title; ?></h2>
+                    <p class="bible-link" id="bible-link">( <a href="<?php echo $sermon_youversionurl; ?>" target="_blank">YouVersion</a> | <a href="<?php echo $sermon_logosurl; ?>" target="_blank">Biblia</a> | <a href="<?php echo $sermon_logosiphoneurl; ?>" target="_blank">Logos</a> )</p>
+                    <p id="perma-link"><a href="<?php echo get_permalink($sermon_ID); ?>">View Reflection</a></p>
+                </div>
+                <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','sermonReflectionContent')">SERMON REFLECTION</a>
 			</div>
 			<div class="five columns" id="daynav2">
-				<a href="javascript:ReplaceContentInContainer('reflectioncontent','
-				<h2><?php echo $bookoftheweekposts[0]->post_title; ?></h2>
-				<p class=&quot;bible-link&quot; id=&quot;bible-link&quot;>( &lt;a href=&quot;<?php echo $bookoftheweek_youversionurl; ?>&quot; target=&quot;_blank&quot;&gt;YouVersion</a> | &lt;a href=&quot;<?php echo $bookoftheweek_logosurl; ?>&quot; target=&quot;_blank&quot;&gt;Biblia</a> | &lt;a href=&quot;<?php echo $bookoftheweek_logosiphoneurl; ?>&quot; target=&quot;_blank&quot;&gt;Logos</a> )</p>
-				<p id=&quot;perma-link&quot;>&lt;a href=&quot;<?php echo get_permalink($bookoftheweek_ID); ?>&quot;&gt;View Reflection</a></p>
-				')">BOOK of the WEEK</a>
+                <div style="display: none" id="bookOfTheWeekContent">
+                    <h2><?php echo $bookoftheweekposts[0]->post_title; ?></h2>
+                    <p class="bible-link" id="bible-link">( <a href="<?php echo $bookoftheweek_youversionurl; ?>" target="_blank">YouVersion</a> | <a href="<?php echo $bookoftheweek_logosurl; ?>" target="_blank">Biblia</a> | <a href="<?php echo $bookoftheweek_logosiphoneurl; ?>" target="_blank">Logos</a> )</p>
+                    <p id="perma-link"><a href="<?php echo get_permalink($bookoftheweek_ID); ?>">View Reflection</a></p>
+                </div>
+                <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','sermonReflectionContent')">BOOK of the WEEK</a>
 			</div>
 			<div class"one coloum omega"></div>
 		<div class="eleven columns" clearfix>
