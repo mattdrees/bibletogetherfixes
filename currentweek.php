@@ -128,37 +128,8 @@
 				
 		<hr style="margin: 0px 0 10px" />
 				
-		<?php 
-		$post_id_1 = $queriedpost_id[1];
-		$post_id_2 = $queriedpost_id[2];
-		$post_id_3 = $queriedpost_id[3];
-		$post_id_4 = $queriedpost_id[4];
-		$post_id_5 = $queriedpost_id[5];
+		<?php
 
-		$scripture1 = get_field('scripture', $post_id_1);
-		$scripture2 = get_field('scripture', $post_id_2);
-		$scripture3 = get_field('scripture', $post_id_3);
-		$scripture4 = get_field('scripture', $post_id_4);
-		$scripture5 = get_field('scripture', $post_id_5);
-		
-		$youversionurl1 = get_field('youversionurl', $post_id_1);
-		$youversionurl2 = get_field('youversionurl', $post_id_2);
-		$youversionurl3 = get_field('youversionurl', $post_id_3);
-		$youversionurl4 = get_field('youversionurl', $post_id_4);
-		$youversionurl5 = get_field('youversionurl', $post_id_5);
-
-		$logosurl1 = get_field('logosurl', $post_id_1);
-		$logosurl2 = get_field('logosurl', $post_id_2);
-		$logosurl3 = get_field('logosurl', $post_id_3);
-		$logosurl4 = get_field('logosurl', $post_id_4);
-		$logosurl5 = get_field('logosurl', $post_id_5);
-
-		$logoiphoneurl1 = get_field('logosiphoneurl', $post_id_1);
-		$logoiphoneurl2 = get_field('logosiphoneurl', $post_id_2);
-		$logoiphoneurl3 = get_field('logosiphoneurl', $post_id_3);
-		$logoiphoneurl4 = get_field('logosiphoneurl', $post_id_4);
-		$logoiphoneurl5 = get_field('logosiphoneurl', $post_id_5);
-		
 		$sermon_ID = $sermonposts[0]->ID;
 		$sermon_youversionurl = get_field('youversionurl', $sermon_ID);
 		$sermon_logosurl = get_field('logosurl', $sermon_ID);
@@ -168,75 +139,37 @@
 		$bookoftheweek_youversionurl = get_field('youversionurl', $bookoftheweek_ID);
 		$bookoftheweek_logosurl = get_field('logosurl', $bookoftheweek_ID);
 		$bookoftheweek_logosiphoneurl = get_field('logosiphoneurl', $bookoftheweek_ID);
+
+        $daysOfWeek = array("MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY");
 		?>
 				
 				
 		<div class="eleven columns" clearfix>
-			<div class="two columns alpha" id="daynav">
-                <div style="display: none" id="reflectionContent1">
-                    <?php
-                    $post_id = $queriedpost_id[1];
-                    $queried_post = get_post($post_id);
-                    ?>
-                    <h2><?php echo $queried_post->post_title; ?></h2>
-                    <p><?php echo $scripture1; ?></p>
-                    <p id="perma-link"><a href="<?php echo get_permalink($queried_post->ID); ?>">View Reflection</a></p>
-                    <p class="bible-link" id="bible-link">( <a href="<?php echo $youversionurl1; ?>" target="_blank">YouVersion</a> | <a href="<?php echo $logosurl1; ?>" target="_blank">Biblia</a> | <a href="<?php echo $logoiphoneurl1; ?>" target="_blank">Logos</a> )</p>
+            <?php foreach ($daysOfWeek as $index => $day) { ?>
+                <div class="two columns <?php if ($index == 0) { echo "alpha"; } ?>" id="daynav">
+                    <div style="display: none" id="reflectionContent<?php echo $dayNumber; ?>">
+                        <?php
+                        $dayNumber = $index + 1;
+                        $post_id = $queriedpost_id[$dayNumber];
+                        $queried_post = get_post($post_id);
+                        $scripture = get_field('scripture', $post_id);
+                        $youversionurl = get_field('youversionurl', $post_id);
+                        $logosurl = get_field('logosurl', $post_id);
+                        $logoiphoneurl = get_field('logosiphoneurl', $post_id);
+                        ?>
+                        <h2><?php echo $queried_post->post_title; ?></h2>
+                        <p><?php echo $scripture; ?></p>
+                        <p class="bible-link" id="bible-link">(
+                            <a href="<?php echo $youversionurl; ?>" target="_blank">YouVersion</a> |
+                            <a href="<?php echo $logosurl; ?>" target="_blank">Biblia</a> |
+                            <a href="<?php echo $logoiphoneurl; ?>" target="_blank">Logos</a> )
+                        </p>
+                        <p id="perma-link"><a href="<?php echo get_permalink($queried_post->ID); ?>">View Reflection</a></p>
+                    </div>
+                    <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent<?php echo $dayNumber; ?>')"><?php echo $day; ?></a>
                 </div>
-                <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent1')">MONDAY</a>
-			</div>
-			<div class="two columns" id="daynav">
-                <div style="display: none" id="reflectionContent2">
-                    <?php
-                    $post_id = $queriedpost_id[2];
-                    $queried_post = get_post($post_id);
-                    ?>
-                    <h2><?php echo $queried_post->post_title; ?></h2>
-                    <p><?php echo $scripture2; ?></p>
-                    <p class="bible-link" id="bible-link">( <a href="<?php echo $youversionurl2; ?>" target="_blank">YouVersion</a> | <a href="<?php echo $logosurl2; ?>" target="_blank">Biblia</a> | <a href="<?php echo $logoiphoneurl2; ?>" target="_blank">Logos</a> )</p>
-                    <p id="perma-link"><a href="<?php echo get_permalink($queried_post->ID); ?>">View Reflection</a></p>
-                </div>
-                <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent2')">TUESDAY</a>
-			</div>
-			<div class="two columns" id="daynav">
-                <div style="display: none" id="reflectionContent3">
-                    <?php
-                    $post_id = $queriedpost_id[3];
-                    $queried_post = get_post($post_id);
-                    ?>
-                    <h2><?php echo $queried_post->post_title; ?></h2>
-                    <p><?php echo $scripture3; ?></p>
-                    <p class="bible-link" id="bible-link">( <a href="<?php echo $youversionurl3; ?>" target="_blank">YouVersion</a> | <a href="<?php echo $logosurl3; ?>" target="_blank">Biblia</a> | <a href="<?php echo $logoiphoneurl3; ?>" target="_blank">Logos</a> )</p>
-                    <p id="perma-link"><a href="<?php echo get_permalink($queried_post->ID); ?>">View Reflection</a></p>
-                </div>
-                <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent3')">WEDNESDAY</a>
-			</div>
-			<div class="two columns" id="daynav">
-                <div style="display: none" id="reflectionContent4">
-                    <?php
-                    $post_id = $queriedpost_id[4];
-                    $queried_post = get_post($post_id);
-                    ?>
-                    <h2><?php echo $queried_post->post_title; ?></h2>
-                    <p><?php echo $scripture4; ?></p>
-                    <p class="bible-link" id="bible-link">( <a href="<?php echo $youversionurl4; ?>" target="_blank">YouVersion</a> | <a href="<?php echo $logosurl4; ?>" target="_blank">Biblia</a> | <a href="<?php echo $logoiphoneurl4; ?>" target="_blank">Logos</a> )</p>
-                    <p id="perma-link"><a href="<?php echo get_permalink($queried_post->ID); ?>">View Reflection</a></p>
-                </div>
-                <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent4')">THURSDAY</a>
-			</div>
-			<div class="two columns" id="daynav">
-                <div style="display: none" id="reflectionContent5">
-                    <?php
-                    $post_id = $queriedpost_id[5];
-                    $queried_post = get_post($post_id);
-                    ?>
-                    <h2><?php echo $queried_post->post_title; ?></h2>
-                    <p><?php echo $scripture5; ?></p>
-                    <p class="bible-link" id="bible-link">( <a href="<?php echo $youversionurl5; ?>" target="_blank">YouVersion</a> | <a href="<?php echo $logosurl5; ?>" target="_blank">Biblia</a> | <a href="<?php echo $logoiphoneurl5; ?>" target="_blank">Logos</a> )</p>
-                    <p id="perma-link"><a href="<?php echo get_permalink($queried_post->ID); ?>">View Reflection</a></p>
-                </div>
-                <a href="javascript:ReplaceContentInContainerWithContentFromOtherContainer('reflectioncontent','reflectionContent5')">FRIDAY</a>
-			</div>
+            <?php } ?>
+
 			<div class="one coloum omega"></div>
 		</div>		
 
